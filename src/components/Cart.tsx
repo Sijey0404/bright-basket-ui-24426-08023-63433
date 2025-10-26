@@ -8,7 +8,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Card } from "@/components/ui/card";
 
-const PICKUP_FEE = 5.00;
+const PICKUP_FEE = 25.00;
 
 const Cart = () => {
   const { items, removeItem, clearCart, totalItems, subtotal } = useCart();
