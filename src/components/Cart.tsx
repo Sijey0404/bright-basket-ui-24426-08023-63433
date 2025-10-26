@@ -31,7 +31,7 @@ const Cart = () => {
 
     toast({
       title: "Order placed!",
-      description: `Your order total is $${total.toFixed(2)}. We'll contact you shortly.`,
+      description: `Your order total is ₱${total.toFixed(2)}. We'll contact you shortly.`,
     });
     clearCart();
     setIsOpen(false);
@@ -77,7 +77,7 @@ const Cart = () => {
                     <div className="flex-1 min-w-0">
                       <h4 className="font-semibold text-sm truncate">{item.name}</h4>
                       <p className="text-xs text-muted-foreground">{item.service}</p>
-                      <p className="text-sm font-bold text-primary mt-1">${item.price.toFixed(2)}</p>
+                      <p className="text-sm font-bold text-primary mt-1">₱{item.price.toFixed(2)}</p>
                     </div>
                     <Button
                       variant="ghost"
@@ -113,7 +113,7 @@ const Cart = () => {
                   <Label htmlFor="pickup" className="flex-1 cursor-pointer">
                     <div className="font-medium">Pickup Service</div>
                     <div className="text-xs text-muted-foreground">We'll pick up from your location</div>
-                    <div className="text-sm font-semibold text-primary mt-1">+${PICKUP_FEE.toFixed(2)}</div>
+                    <div className="text-sm font-semibold text-primary mt-1">+₱{PICKUP_FEE.toFixed(2)}</div>
                   </Label>
                 </div>
               </RadioGroup>
@@ -123,17 +123,17 @@ const Cart = () => {
             <div className="space-y-2 py-3 border-t border-border">
               <div className="flex justify-between text-sm">
                 <span className="text-muted-foreground">Subtotal</span>
-                <span className="font-semibold">${subtotal.toFixed(2)}</span>
+                <span className="font-semibold">₱{subtotal.toFixed(2)}</span>
               </div>
               {deliveryMethod === "pickup" && (
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Pickup Fee</span>
-                  <span className="font-semibold">${PICKUP_FEE.toFixed(2)}</span>
+                  <span className="font-semibold">₱{PICKUP_FEE.toFixed(2)}</span>
                 </div>
               )}
               <div className="flex justify-between text-lg font-bold pt-2 border-t border-border">
                 <span>Total</span>
-                <span className="text-primary">${total.toFixed(2)}</span>
+                <span className="text-primary">₱{total.toFixed(2)}</span>
               </div>
             </div>
 
